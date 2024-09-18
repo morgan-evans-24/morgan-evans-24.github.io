@@ -50,7 +50,7 @@
     </nav>
 
     <!--Main Content-->
-    <!--NEXT THINGS TO ADD, website hosting, make website accessible, make mobile friendly-->
+    <!--NEXT THINGS TO ADD, make website accessible, make mobile friendly-->
     <!--about me-->
     <div class="container pt-3 pb-3">
 
@@ -124,11 +124,11 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                        <button tabindex="-1" class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                        <button tabindex="-1" class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -163,7 +163,7 @@
                 <h4>Technical Skills</h4>
                 <p>
                     Below I have listed some of my most practiced languages and technologies, including progress bars.
-                    The percentage on the bar lists my confidence and skill level in said technology.
+                    The percentage on the bar lists my confidence and skill level.
                 </p>
                 <br />
                 <div class="progress-bars-text">
@@ -209,7 +209,7 @@
                     Got something to say? Feel free to contact me here, or through my social media links listed in the 
                     navigation menu at the top of the screen.
                 </p>
-                <form action="https://api.web3forms.com/submit" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
                     <div class="form-text">* indicates required field.</div>
                     <div class="mb-3">
                         <input type="hidden" name="access_key" value="50e624d4-de65-444e-94c0-b9f54a497946">
@@ -227,6 +227,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                <p id="result" class="form-text"></p>
             </div>
         </div>
 
