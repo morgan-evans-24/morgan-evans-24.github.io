@@ -1,8 +1,22 @@
+if (screen.width < 768) {
+    document.querySelectorAll("#desktopsocials").forEach(social => {
+        social.style.display = "none";
+    });
+}
+else {
+    document.querySelectorAll("#mobilesocials").forEach(social => {
+        social.style.display = "none";
+    });
+
+}
+
+
 const canvas = document.getElementById('matrix');
 const context = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
-canvas.height = 300;
+
+canvas.height = screen.availHeight * 0.25;
 
 const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lower = 'abcdefghijklmnopqrstuvwxyz';
@@ -11,8 +25,9 @@ const special = '!()#<>{}[]';
 
 const alphabet = upper + lower + numbers + special;
 
-const fontSize = 10;
-const columns = canvas.width / fontSize;
+
+const columns = canvas.width / 10;
+const fontSize = canvas.width / columns;
 
 const rainDrops = [];
 
@@ -125,7 +140,7 @@ form.addEventListener('submit', function (e) {
 function loadBar(bar) {
     bar.style.width = "0%";
     bar.style.transition = "1s";
-    bar.style.width = bar.innerText;
+    bar.style.width = bar.ariaValueNow + "%";
 }
 
 function highlightNavElement(header) {
@@ -157,13 +172,16 @@ function changeClass(num) {
 }
 
 function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if ((document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) && screen.availWidth > 600) {
 
-        document.querySelector("h1").style.fontSize = "25px";
+        document.querySelector("#header p").style.fontSize = "2vw";
+        console.log("chci");
     }
     else {
-
-        document.querySelector("h1").style.fontSize = "35px";
+        if (screen.availWidth > 600) {
+            document.querySelector("#header p").style.fontSize = "2.5vw";
+        }
+        
     }
 }
 
