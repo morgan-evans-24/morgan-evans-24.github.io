@@ -1,0 +1,114 @@
+﻿
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 1fr;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+     /*controls the layering of elements*/
+}
+
+#matrix {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0px;
+    margin: 0px;
+    height: 300px;
+    width: 100%;
+}
+
+#header h1 {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    line-height: 300px;
+    transition: 0.4s;
+    padding: 0px;
+    margin: 0px;
+    z-index: 99;
+    font-size: 52px;
+}
+
+.fa {
+    font-size: 20px;
+    align-content: end;
+    margin-right: 20px;
+}
+.nav-link:hover {
+    border: 1px solid green;
+    
+}
+
+
+
+
+
+body {
+    background-color: grey;
+    padding: 0px !important;
+    margin: 0px;
+    font-family: Arial;
+    overflow-anchor: none;
+    
+}
+
+
+
+
+
+p {
+    text-align: justify;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+
+#aboutme {
+    scroll-margin-top: 60px;
+}
+
+
+
+
+
+#myprojects {
+    scroll-margin-top: 60px;
+}
+
+.footer p {
+    color: gray;
+}
+
+.carousel-width {
+    width: 700px;
+}
+
+
+
+
+#skillsandexperience {
+    scroll-margin-top: 60px;
+}
+
+div.progress-bars-text p {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#contactme {
+    scroll-margin-top: 60px;
+}
+
+
