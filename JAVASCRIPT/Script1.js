@@ -1,4 +1,13 @@
+let narrow;
 if (screen.width < 768) {
+    narrow = true;
+}
+else {
+    narrow = false;
+}
+
+
+if (narrow) {
     document.querySelectorAll("#desktopsocials").forEach(social => {
         social.style.display = "none";
     });
@@ -80,6 +89,7 @@ const headers = document.querySelectorAll("h2");
 const headerObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            console.log(narrow);
             highlightNavElement(entry.target)
         }
     })
@@ -87,16 +97,22 @@ const headerObserver = new IntersectionObserver(entries => {
     rootMargin: "-50px 0px -300px 0px" //top right bottom left
 })
 
+if (!narrow) {
+    headers.forEach(header => {
+        headerObserver.observe(header)
+    });
 
-headers.forEach(header => {
-    headerObserver.observe(header)
-});
+    changeClass(0);
+
+    window.onscroll = function () { scrollFunction() };
+}
+
 
 setInterval(draw, 40);
 
-changeClass(0);
 
-window.onscroll = function () { scrollFunction() };
+
+
 
 const form = document.getElementById('form');
 const result = document.getElementById('result');
@@ -165,22 +181,26 @@ function changeClass(num) {
         otherButton.classList.remove("active");
         otherButton.style.backgroundColor = "lightgreen";
     }
-    ourButton.classList.add("active");
-    ourButton.style.backgroundColor = "forestgreen";
+    if (!narrow) {
+        ourButton.classList.add("active");
+        ourButton.style.backgroundColor = "forestgreen";
+    }
+    else {
+        document.getElementById("togglemenu").click();
+    }
+
 
     return true;
 }
 
 function scrollFunction() {
-    if ((document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) && screen.availWidth > 600) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 
         document.querySelector("#header p").style.fontSize = "2vw";
-        console.log("chci");
     }
     else {
-        if (screen.availWidth > 600) {
-            document.querySelector("#header p").style.fontSize = "2.5vw";
-        }
+        document.querySelector("#header p").style.fontSize = "2.5vw";
+        
         
     }
 }

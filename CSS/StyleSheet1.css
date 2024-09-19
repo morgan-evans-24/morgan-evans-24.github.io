@@ -73,17 +73,7 @@ html {
 }
 
 
-#aboutme {
-    scroll-margin-top: 60px;
-}
 
-
-
-
-
-#myprojects {
-    scroll-margin-top: 60px;
-}
 
 .footer p {
     color: gray;
@@ -96,9 +86,6 @@ html {
 
 
 
-#skillsandexperience {
-    scroll-margin-top: 60px;
-}
 
 div.progress-bars-text p {
     font-weight: bold;
@@ -106,14 +93,16 @@ div.progress-bars-text p {
     margin-bottom: 5px;
 }
 
-#contactme {
-    scroll-margin-top: 60px;
-}
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {     /*Narrow screens*/
     #header p {
         font-size: 10vw;
         
+    }
+
+    #togglemenu {
+        margin:8px;
     }
 
     .nav-item {
@@ -125,15 +114,18 @@ div.progress-bars-text p {
         margin: 0px !important;
     }
 
+
+
     #aboutmetextcol {
         width: 100%;
     }
-
     
     #portrait {
         display:block;
         margin:auto;
     }
+
+
 
     #carouselitemcustom {
         width: 100vw;
@@ -141,6 +133,24 @@ div.progress-bars-text p {
     .carousel-width {
         width: 100%;
     }
+
+
+    #aboutme {
+        scroll-margin-top: 340px;
+    }
+
+    #myprojects {
+        scroll-margin-top: 340px;
+    }
+
+    #skillsandexperience {
+        scroll-margin-top: 340px;
+    }
+
+    #contactme {
+        scroll-margin-top: 336px;
+    }
+
 }
 @media only screen and (min-width: 768px) {
     #header p {
@@ -149,6 +159,24 @@ div.progress-bars-text p {
 
     .nav {
         margin-left: 48px;
+    }
+
+
+
+    #aboutme {
+        scroll-margin-top: 60px;
+    }
+
+    #myprojects {
+        scroll-margin-top: 60px;
+    }
+
+    #skillsandexperience {
+        scroll-margin-top: 60px;
+    }
+
+    #contactme {
+        scroll-margin-top: 60px;
     }
 }
 
