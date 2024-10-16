@@ -89,7 +89,6 @@ const headers = document.querySelectorAll("h2");
 const headerObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            console.log(narrow);
             highlightNavElement(entry.target)
         }
     })
@@ -110,6 +109,42 @@ if (!narrow) {
 
 setInterval(draw, 40);
 
+
+//let carousel = document.querySelector("carousel")
+//carousel.on()
+let carouselIndicators = document.querySelectorAll(".carousel-indicators button");
+for (var i = 0, len = carouselIndicators.length; i < len; i++) {
+    console.log(carouselIndicators[i]);
+}
+$('.carousel').on('slid.bs.carousel', function () {
+    refreshSlides();
+});
+
+
+
+
+function refreshSlides() {
+    
+    for (var i = 0, len = carouselIndicators.length; i < len; i++) {
+        if (carouselIndicators[i].classList.contains("active")) {
+            if (i == 0) {
+                document.getElementById('slide1').style.display = "block";
+                document.getElementById('slide2').style.display = "none";
+                document.getElementById('slide3').style.display = "none";
+            }
+            if (i == 1) {
+                document.getElementById('slide1').style.display = "none";
+                document.getElementById('slide2').style.display = "block";
+                document.getElementById('slide3').style.display = "none";
+            }
+            if (i == 2) {
+                document.getElementById('slide1').style.display = "none";
+                document.getElementById('slide2').style.display = "none";
+                document.getElementById('slide3').style.display = "block";
+            }
+        }
+    }
+}
 
 
 
