@@ -109,6 +109,12 @@ if (!narrow) {
 
 setInterval(draw, 40);
 
+// Target the previous and next buttons
+const prevButton = document.querySelector('.carousel-control-prev .carousel-control-prev-icon');
+const nextButton = document.querySelector('.carousel-control-next .carousel-control-next-icon');
+
+// Change the background color to black
+
 
 //let carousel = document.querySelector("carousel")
 //carousel.on()
@@ -120,27 +126,36 @@ $('.carousel').on('slid.bs.carousel', function () {
     refreshSlides();
 });
 
-
+refreshSlides();
 
 
 function refreshSlides() {
     
-    for (var i = 0, len = carouselIndicators.length; i < len; i++) {
+    for (var i = 0; i < carouselIndicators.length; i++) {
         if (carouselIndicators[i].classList.contains("active")) {
             if (i == 0) {
                 document.getElementById('slide1').style.display = "block";
                 document.getElementById('slide2').style.display = "none";
                 document.getElementById('slide3').style.display = "none";
+                prevButton.style.filter = 'invert(0)';
+                nextButton.style.filter = 'invert(0)';
+
             }
             if (i == 1) {
                 document.getElementById('slide1').style.display = "none";
                 document.getElementById('slide2').style.display = "block";
                 document.getElementById('slide3').style.display = "none";
+                prevButton.style.filter = 'invert(1)';
+                nextButton.style.filter = 'invert(1)';
+
             }
             if (i == 2) {
                 document.getElementById('slide1').style.display = "none";
                 document.getElementById('slide2').style.display = "none";
                 document.getElementById('slide3').style.display = "block";
+                prevButton.style.filter = 'invert(0)';
+                nextButton.style.filter = 'invert(0)';
+
             }
         }
     }

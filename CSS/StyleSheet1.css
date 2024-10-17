@@ -83,6 +83,9 @@ html {
     width: 700px;
 }
 
+div.carousel-caption p {
+    text-align: center;
+}
 
 
 
@@ -134,7 +137,6 @@ div.progress-bars-text p {
         width: 100%;
     }
 
-
     #aboutme {
         scroll-margin-top: 340px;
     }
@@ -178,6 +180,12 @@ div.progress-bars-text p {
     #contactme {
         scroll-margin-top: 60px;
     }
+
+    #carouselitemcustom {
+        width: 100%;
+        height: auto;
+    }
+
 }
 
 
