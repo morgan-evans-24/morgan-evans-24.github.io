@@ -88,11 +88,14 @@ div.carousel-caption p {
 }
 
 .project-description {
-    background-color: black;
-    color: white;
-    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
+.project-description p {
+    color: white;
+}
 
 
 div.progress-bars-text p {
